@@ -1,0 +1,211 @@
+.header {
+	position: relative;
+	min-height: 80px;
+	background-color: $colorLightGreen;
+
+	&::after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: url("../images/header-decoration-line.png") repeat-x;
+		content: '';
+		display: block;
+		height: 9px;
+		width: 100%;
+	}
+}
+
+/*LOGO*/
+.logo_top {
+	margin: 22px 0;
+}
+
+.logo {
+	&__link {
+		@include font($openSansBold, $mainFontSize + 17, $colorWhite);
+		line-height: 36px;
+		text-transform: uppercase;
+
+		&:visited {
+			color: $colorWhite;
+		}
+
+		&:hover {
+			color: $colorWhite;
+		}
+	}
+
+	&__text {
+		margin-left: -5px;
+		@include font($openSansRegular, $mainFontSize + 12, $colorWhite);
+		line-height: 30px;
+		text-transform: none;
+	}
+}
+
+/*Main-menu*/
+.main-menu {
+
+	&__list {
+		display: inline-block;
+		margin: 23.5px 0;
+	}
+
+	&__item {
+		position: relative;
+		margin-right: 8px;
+		display: inline-block;
+		@include transition(all 0.5s ease-in-out);
+
+		&:hover .main-menu__link {
+			background-color: $colorLightRed;
+			border-color: $colorRed;
+		}
+
+		&:hover .main-menu__link-icon {
+			@include transform(rotate(180deg));
+		}
+
+		&:hover .main-menu__submenu-wrapper {
+			display: block;
+		}
+		
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&.active .main-menu__link {
+			background-color: $colorGreen;
+			border-bottom: 3px solid $colorDarkGreen;	
+			cursor: default;		
+		}
+	}
+	
+	&__link {
+		position: relative;
+		display: block;
+		padding: 6.5px 14px;
+		border-radius: 5px;
+		@include font($openSansSemibold, $mainFontSize + 1, $colorWhite);
+		line-height: 17px;
+		border-bottom: 3px solid transparent;
+		@include transition(all 0.5s ease-in-out);
+	}
+
+	&__link-icon {
+		margin-right: 6px;
+		@include transition(all 0.5s ease-in-out);
+	}
+
+	&__submenu-wrapper {
+		display: none;
+		padding-top: 12px;
+		position: absolute;
+		width: 201px;
+		left: 0;
+		top: 100%;
+		z-index: 10;	
+		@include transition(all 0.5s ease-in-out);
+	}
+
+	&__submenu {
+	}
+}
+
+.submenu {
+	position: relative;
+	background-color: $colorRed;
+	padding: 5px;
+	border-radius: 5px;
+
+	&::before {
+		position: absolute;
+		top: -6px;
+		left: 12px;
+		content: '';
+		display: block;
+		width: 0;
+		height: 0;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-bottom: 6px solid $colorRed;
+	}
+
+	&__item {
+		margin-bottom: 5px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: 7px 17px 7px 11px;
+		@include font($openSansSemibold, $mainFontSize, $colorWhite);
+		line-height: 16px;
+		background-color: $colorLightRed;
+		border-radius: 3px;
+		@include transition(all 0.5s ease-in-out);
+
+		&:hover {
+			background-color: $colorLightGreen;
+		}
+
+		i {
+			margin-right: 5px;
+		}
+	}
+}
+
+.search-form {
+	margin: 23.5px 0;
+	position: relative;
+	float: right;
+	width: 34px;
+	height: 33px;
+	
+
+	&__input-wrapper {
+		position: absolute;
+		right: 0;
+		top: 100%;
+		display: inline-block;
+		padding-top: 11px;
+		z-index: 10;
+		
+		&::after {
+		position: absolute;
+		top: 5px;
+		right: 12px;
+		content: '';
+		display: block;
+		width: 0;
+		height: 0;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-bottom: 6px solid $colorRed;
+		}	
+	}
+	&__input {
+		position: relative;
+		padding: 3px 9px;
+		width: 190px;
+		border-radius: 4px;
+		background-color: $colorWhite;
+		border: 5px solid $colorRed;
+		@include font($openSansRegular, $mainFontSize + 1, $colorGray);
+		line-height: 24px;
+		outline: none;
+	}
+
+	&__btn {
+		width: 34px;
+		height: 33px;
+		border: 1px solid transparent;
+		border-bottom: 3px solid $colorRed;
+		border-radius: 5px;
+	 	background: $colorLightRed url("../images/search-btn-icon.png") no-repeat center center;
+		outline: none;
+	}
+}

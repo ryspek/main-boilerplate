@@ -1,0 +1,64 @@
+.footer {
+	padding-top: 40px;
+	background: $colorLightGreen url('../images/footer-decoration-line.png') repeat-x top left;
+}
+
+.footer-contacts {
+	
+}
+
+.footer-contacts__text {
+	margin-top: 20px;
+	@include font($openSansRegular, $mainFontSize, $colorWhite);
+	line-height: 23px;
+}
+
+.phone-and-email {
+
+} 
+
+.phone-and-email__item {
+
+}
+
+.phone-and-email__title {
+	@include font($openSansRegular, $mainFontSize, $colorWhite);
+	line-height: 23px;
+}
+
+.phone-and-email__number {
+	@include font($openSansSemibold, ($mainFontSize + 7), $colorWhite);
+	font-style: italic;
+}
+
+.footer-menu {
+}
+
+
+.footer-menu__item {
+
+}
+
+.footer-menu__title {
+	margin-top: 5px;
+	@include font($openSansBold, ($mainFontSize + 7), $colorLightBlack);
+	line-height: 24px;
+}
+
+.footer-menu__list {
+	margin-top: 27px;
+	padding-left: 23px;
+}
+
+.footer-menu__list-items {
+
+}
+
+.footer-menu__list-link {
+	@include font($openSansRegular, $mainFontSize, $colorWhite);
+	line-height: 23px;
+
+	i {
+		margin-right: 6px;
+	}
+}

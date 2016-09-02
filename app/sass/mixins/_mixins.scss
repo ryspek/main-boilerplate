@@ -1,0 +1,30 @@
+// For transparent text
+@mixin transparent-text($color, $opacity) {
+	color: $color;
+	opacity: $opacity;
+}
+
+// For transparent background
+@mixin transparent-bg($width, $height, $opacity, $color, $radius) {
+	width: $width;
+	height: $height;
+	opacity: $opacity;
+	background-color: $color;
+	border-radius: $radius;
+}
+
+// For text styles
+@mixin font ($font-family, $font-size, $color) {
+	font-family: $font-family;
+	font-size: $font-size;
+	color: $color;
+}
+
+@mixin zero-centered() {
+	position: absolute;
+  top: 0;
+  right: 0; 
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
