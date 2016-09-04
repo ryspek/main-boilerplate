@@ -1,0 +1,19 @@
+{
+  "name": "adaptive-training",
+  "version": "1.0.0",
+  "description": "This is a template for starting a new project.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryspek/main-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryspek/main-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ryspek/main-boilerplate#readme"
+}
